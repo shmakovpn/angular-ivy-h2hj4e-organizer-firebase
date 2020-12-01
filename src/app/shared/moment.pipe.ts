@@ -4,7 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import moment from 'moment'; // 22:22
 
 @Pipe({
-  name: 'moment'
+  name: 'moment',
+  pure: false // 25:36
 })
 export class MomentPipe implements PipeTransform {
 

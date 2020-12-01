@@ -13,7 +13,7 @@ export class SelectorComponent {
   constructor(public dateService: DateService) { } // 21:11 !23:44=changed private to public
 
   go(dir: number) {
-    // todo
+    this.dateService.changeMonth(dir); // 
   }
 
 }
