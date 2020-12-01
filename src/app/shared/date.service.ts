@@ -10,4 +10,9 @@ export default moment;
 })
 export class DateService {
   public date: BehaviorSubject<moment.Moment> = new BehaviorSubject(moment()) // 20:28, 20:38, 20:45
+
+  changeMonth(dir: number) {
+    const value = this.date.value.add(dir, 'month'); // 25:53
+    this.date.next(value); // 25:59
+  }
 }
