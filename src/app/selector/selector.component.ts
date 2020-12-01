@@ -10,6 +10,6 @@ import { DateService } from '../shared/date.service';
 })
 export class SelectorComponent {
 
-  constructor(private dateService: DateService) { } // 21:11
-  
+  constructor(public dateService: DateService) { } // 21:11 !23:44=changed private to public
+
 }

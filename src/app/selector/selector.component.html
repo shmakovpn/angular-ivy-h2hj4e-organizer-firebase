@@ -2,7 +2,9 @@
 
   <i class="material-icons">arrow_left</i><!-- 17:48 -->
   
-  <span>some test2</span>
+  <span>
+    {{ dateService.date | async | moment }}<!-- 23:44 -->
+  </span>
 
   <i class="material-icons">arrow_right</i><!-- 18:00 -->
 
