@@ -1,7 +1,9 @@
 // added manually 19:28
 import { Injectable } from "@angular/core";
-import * as moment from 'moment'; // 20:06
+// https://stackoverflow.com/questions/55131138/how-to-properly-import-momentjs-in-typescript-to-resolve-the-following-error-t?noredirect=1&lq=1 
+import moment from 'moment'; // 20:06
 import { BehaviorSubject } from "rxjs";
+export default moment;
 
 @Injectable({
   providedIn: 'root' // 19:35
