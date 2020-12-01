@@ -8,11 +8,7 @@ import { DateService } from '../shared/date.service';
   templateUrl: './selector.component.html',
   styleUrls: ['./selector.component.scss']
 })
-export class SelectorComponent implements OnInit {
+export class SelectorComponent {
 
   constructor(private dateService: DateService) { } // 21:11
-
-  ngOnInit() {
-  }
-
 }
