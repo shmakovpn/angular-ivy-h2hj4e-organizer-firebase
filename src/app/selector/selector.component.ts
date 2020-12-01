@@ -1,6 +1,6 @@
 // ng g c selector --skipTests 14:00
 
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DateService } from '../shared/date.service';
 
 @Component({
