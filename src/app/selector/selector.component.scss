@@ -1,0 +1,15 @@
+p {
+  display: flex; // 18:26
+  align-items: center; // 18:28
+  justify-content: center; // 18:33
+
+  span {
+    margin: 0 2rem; // 18:40
+    text-align: center; // 18:42
+    width: 200px; // 18:45
+  }
+
+  i {
+    cursor: pointer; // 18:49
+  }
+}
