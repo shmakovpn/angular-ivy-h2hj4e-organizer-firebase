@@ -5,18 +5,21 @@
   </header>
 
   <main>
-    <ul>
+    <ul *ngIf="tasks.length; else noTasks"><!-- 1:12:42 -->
       <!-- 48:40 -->
-      <li class="task">
+      <li class="task" *ngFor="let task of tasks; let i = index"><!-- 1:11:53 -->
         <!-- 50:28 -->
         <span>
-          <strong>1</strong><!-- 50:46,52:49 -->
+          <strong>{{i+1}}</strong><!-- 50:46,52:49,1:11:58 -->
           <!-- async pipe needed, because dateService.data is an instance of BehaviorSubject -->
-          taskName
+          {{task.title}}<!-- 1:12:04 -->
         </span>
-        <button class="btn btn-primary">Remove</button><!-- 50:57 -->
+        <button class="btn btn-primary" (click)="remove(task)">Remove</button><!-- 50:57, 1:12:13 -->
       </li>
     </ul>
+    <ng-template #noTasks><!-- 1:12:46, 1:13:01 -->
+      <p class="text-center">No tasks yet...</p><!-- 1:12:55 -->
+    </ng-template>
   </main>
 
   <footer>

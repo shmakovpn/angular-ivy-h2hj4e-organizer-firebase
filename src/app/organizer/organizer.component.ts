@@ -18,7 +18,7 @@ export class OrganizerComponent implements OnInit {
 
   constructor(public dateService: DateService, // 52:23, I changed private to public
     private taskService: TaskService) { // 1:02:32
-    // 
+    //  
   }
 
   ngOnInit() {
@@ -45,5 +45,9 @@ export class OrganizerComponent implements OnInit {
       this.form.reset(); // 1:04:23
     }, err => console.error(err)); // 1:04:10
     console.log(title);
+  }
+
+  remove(task: Task) { // 1:12:23
+    // 
   }
 }
