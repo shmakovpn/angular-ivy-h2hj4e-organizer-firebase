@@ -59,7 +59,7 @@ export class CalendarComponent implements OnInit {
       })
     }
     
-    this.calendar = calendar
+    this.calendar = calendar //  
   }
 
 }
