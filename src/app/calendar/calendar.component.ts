@@ -62,4 +62,8 @@ export class CalendarComponent implements OnInit {
     this.calendar = calendar // 
   }
 
+  select(day: Day) { // 45:17, I changed type moment.Moment to Day
+    //
+  }
+
 }
