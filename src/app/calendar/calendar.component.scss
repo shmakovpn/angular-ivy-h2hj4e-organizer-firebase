@@ -1,6 +1,7 @@
 table {
   width: 100%; // 41:39
   margin-bottom: 1rem; // 41:42
+  border-collapse: collapse; // 44:35
 
   td, th {
     border: 1px solid #000; // 41:58
