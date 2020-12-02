@@ -1,5 +1,12 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { map } from "rxjs/operators";
+
+export interface Task { // 59:50,59:58
+  id?: string; // 1:00:08
+  title: string; // 59:54
+  date?: string; // 1:00:30
+}
 
 @Injectable({
   providedIn: 'root', // 58:21
@@ -9,5 +16,14 @@ export class TaskService { // 58:28
 
   constructor(private http: HttpClient) { // 59:13
     //
+  }
+
+  create(task: Task) { // 59:44
+    this.http
+      .post<any>(`${TaskService.url}/${task.date}.json`, task)
+      .pipe(map(response => {
+        console.log('Response:', response)
+        return response; // 1:02:08
+      }))
   }
 }
