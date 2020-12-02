@@ -15,4 +15,12 @@ export class DateService {
     const value = this.date.value.add(dir, 'month'); // 25:53
     this.date.next(value); // 25:59
   }
+
+  changeDate(date: moment.Moment) { // 45:34
+    const value = this.date.value.set({
+      date: date.date(), // 45:59
+      month: date.month(), // 46:04
+    });
+    this.date.next(value); // 46:12
+  }
 }
