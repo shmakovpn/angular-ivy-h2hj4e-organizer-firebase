@@ -13,5 +13,5 @@ export class OrganizerComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }
