@@ -6,3 +6,12 @@ section {
     margin-bottom: 1rem; // 49:58
   }
 }
+
+.task {
+  display: flex; // 51:09
+  justify-content: space-between; // 51:12
+  align-items: center; // 51:14
+  padding: .5rem 1rem; // 51:20
+  border: 1px solid #ccc; // 51:31
+  margin-bottom: .5rem; // 51:34
+}
