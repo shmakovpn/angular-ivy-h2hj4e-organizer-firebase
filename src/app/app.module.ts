@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule, 
     FormsModule, // 53:51
     ReactiveFormsModule, // 53:58
+    HttpClientModule, // https://stackoverflow.com/questions/50282848/cant-find-angular-common-http-on-stackblitz
   ],
   declarations: [ 
     AppComponent, 
