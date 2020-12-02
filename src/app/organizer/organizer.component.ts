@@ -45,10 +45,12 @@ export class OrganizerComponent implements OnInit {
       this.tasks.push(task); // 1:13:51
       this.form.reset(); // 1:04:23
     }, err => console.error(err)); // 1:04:10
-    console.log(title);
+    // console.log(title);
   }
 
   remove(task: Task) { // 1:12:23
-    // 
+    this.taskService.remove(task).subscribe(() => {
+      this.tasks = this.tasks.filter(t => t.id !== task.id); // 1:15:43
+    }, err => console.error(err)); // 1:15:07,1:15:21
   }
 }

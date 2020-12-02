@@ -39,7 +39,7 @@ export class TaskService { // 58:28
     return this.http
       .post<CreateResponse>(`${TaskService.url}/${task.date}.json`, task) // 1:05:35
       .pipe(map(response => {
-        console.log('Response:', response)
+        // console.log('Response:', response)
         // return response; // 1:02:08
         return {...task, id: response.name}; // 1:06:07
       }))
