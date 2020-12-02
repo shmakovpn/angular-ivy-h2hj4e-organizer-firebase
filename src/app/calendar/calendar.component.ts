@@ -53,11 +53,13 @@ export class CalendarComponent implements OnInit {
           const selected = now.isSame(value, 'date');// 35:52
 
           return {
-            value, active, disabled, selected// 34:21? 36:02
+            value, active, disabled, selected // 34:21? 36:02
           }
         })
       })
     }
+    
+    this.calendar = calendar
   }
 
 }
