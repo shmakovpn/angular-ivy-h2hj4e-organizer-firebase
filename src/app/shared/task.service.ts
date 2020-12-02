@@ -44,4 +44,9 @@ export class TaskService { // 58:28
         return {...task, id: response.name}; // 1:06:07
       }))
   }
+
+  remove(task: Task): Observable<void> { // 1:14:08,
+    return this.http
+      .delete<void>(`${TaskService.url}/${task.date}/${task.id}.json`); // 1:14:59
+  }
 }
