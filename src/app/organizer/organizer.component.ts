@@ -2,6 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { switchMap } from 'rxjs/operators';
 import { DateService } from '../shared/date.service';
 import { Task, TaskService } from '../shared/task.service';
 
@@ -13,6 +14,7 @@ import { Task, TaskService } from '../shared/task.service';
 export class OrganizerComponent implements OnInit {
 
   public form: FormGroup; // 54:08
+  public tasks: Task[] = []; // 1:11:16
 
   constructor(public dateService: DateService, // 52:23, I changed private to public
     private taskService: TaskService) { // 1:02:32
@@ -20,6 +22,12 @@ export class OrganizerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dateService.date.pipe(
+      switchMap(value => this.taskService.load(value)), // 1:10:56
+    ).subscribe(tasks => {
+      this.tasks = tasks; // 1:11:10
+    });
+
     this.form = new FormGroup({
       title: new FormControl('', Validators.required), // 54:39
     })
