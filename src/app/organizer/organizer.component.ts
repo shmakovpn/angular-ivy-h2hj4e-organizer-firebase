@@ -25,6 +25,6 @@ export class OrganizerComponent implements OnInit {
   
   submit() {
     const {title} = this.form.value; // 55:38
-    console.log(title)
+    console.log(title);
   }
 }
