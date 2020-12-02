@@ -33,6 +33,7 @@ export class OrganizerComponent implements OnInit {
     };
 
     this.taskService.create(task).subscribe( task => {
+      console.log('New task:', task); // 1:06:23
       this.form.reset(); // 1:04:23
     }, err => console.error(err)); // 1:04:10
     console.log(title);
