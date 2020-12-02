@@ -63,7 +63,7 @@ export class CalendarComponent implements OnInit {
   }
 
   select(day: Day) { // 45:17, I changed type moment.Moment to Day
-    //
+    this.dateService.changeDate(day.value); // 46:27, I changed dato to day.value
   }
 
 }
