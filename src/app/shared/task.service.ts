@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { map } from "rxjs/operators";
+import { Observable } from "rxjs"; // 1:03:47
 
 export interface Task { // 59:50,59:58
   id?: string; // 1:00:08
@@ -18,7 +19,7 @@ export class TaskService { // 58:28
     //
   }
 
-  create(task: Task): Obser { // 59:44
+  create(task: Task): Observable<Task> { // 59:44
     return this.http
       .post<any>(`${TaskService.url}/${task.date}.json`, task)
       .pipe(map(response => {
