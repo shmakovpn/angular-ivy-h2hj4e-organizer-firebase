@@ -1,0 +1,32 @@
+table {
+  width: 100%; // 41:39
+  margin-bottom: 1rem; // 41:42
+
+  td, th {
+    border: 1px solid #000; // 41:58
+    padding: .5rem 1rem; // 42:02
+  }
+
+  td {
+    text-align: center; // 42:09
+    transition: all .2s; // 42:40
+
+    &.disabled {
+      opacity: .5; // 42:24
+    }
+
+    &:hover:not(.disabled) { // 43:00
+      background: #eee; // 42:50
+      cursor: pointer; // 42:54
+    }
+
+    .active {
+      color: var(--primary-color); // 43:14
+      font-weight: bold; // 43:18
+    }
+
+    .selected {
+      color: blue; // 43:24
+    }
+  }
+}
