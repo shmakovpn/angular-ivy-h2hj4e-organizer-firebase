@@ -18,8 +18,8 @@ export class TaskService { // 58:28
     //
   }
 
-  create(task: Task) { // 59:44
-    this.http
+  create(task: Task): Obser { // 59:44
+    return this.http
       .post<any>(`${TaskService.url}/${task.date}.json`, task)
       .pipe(map(response => {
         console.log('Response:', response)

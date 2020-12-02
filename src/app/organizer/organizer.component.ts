@@ -3,6 +3,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DateService } from '../shared/date.service';
+import { Task, TaskService } from '../shared/task.service';
 
 @Component({
   selector: 'app-organizer',
@@ -13,7 +14,8 @@ export class OrganizerComponent implements OnInit {
 
   public form: FormGroup; // 54:08
 
-  constructor(public dateService: DateService) { // 52:23, I changed privato to public
+  constructor(public dateService: DateService, // 52:23, I changed private to public
+    private taskService: TaskService) { // 1:02:32
     // 
   }
 
@@ -25,6 +27,12 @@ export class OrganizerComponent implements OnInit {
   
   submit() {
     const {title} = this.form.value; // 55:38
+    const task: Task = {
+      title, // 1:02:54
+      date: this.dateService.date.value.format('DD-MM-YYYY'), // 1:03:12
+    }
+
+    //this.taskService.create
     console.log(title);
   }
 }
